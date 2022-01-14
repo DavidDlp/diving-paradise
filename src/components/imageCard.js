@@ -9,6 +9,7 @@ import {
     makeStyles, 
     Typography 
 } from '@material-ui/core';
+import island from './../assets/lanzarote.jpeg'
 
 export default function ImageCard() {
     const classes = useStyles();
@@ -18,14 +19,24 @@ export default function ImageCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={island}
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography 
+            className={classes.title}
+            gutterBottom 
+            variant="h5" 
+            component="h2"
+          >
             Lizard
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography 
+            className={classes.description}
+            variant="body2" 
+            color="textSecondary" 
+            component="p"
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
           </Typography>
@@ -43,9 +54,21 @@ export default function ImageCard() {
 
 const useStyles = makeStyles((theme) =>({
     root: {
-        maxWidth: 345,
+        maxWidth: 375,
+        background: 'rgba(0,0,0,0.5)',
+        margin: '10px',
       },
       media: {
-        height: 140,
+        height: 120,
+      },
+      title:{
+        fontFamily: 'Lobster',
+        fontWeight: 'bold',
+        fontSize: '1.5rem',
+        color: '#fff'
+      },
+      description:{
+        fontSize: '0.7rem',
+        color: '#ddd'
       },
 }));

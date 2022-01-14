@@ -10,7 +10,6 @@ export default function DivePlace() {
             <ImageCard/>
             <ImageCard/>
             <ImageCard/>
-            <ImageCard/>
         </div>
     )
 
@@ -18,6 +17,10 @@ export default function DivePlace() {
 
 const useStyles = makeStyles((theme) =>({
     root: {
-        height: '100vh',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
     },
 }));
