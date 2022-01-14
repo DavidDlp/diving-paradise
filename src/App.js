@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react'
+//STYLES
+import { CssBaseline, makeStyles } from '@material-ui/core';
 import './App.css';
+//COMPONENTS
+import Header from './components/core/Header';
+import DivePlace from './components/DivePlace';
+//IMAGE
+import background from './assets/olas-dive.jpeg'
 
-function App() {
+export default function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <CssBaseline/>
+      <Header/>
+      <DivePlace/>
     </div>
   );
 }
 
-export default App;
+const useStyles = makeStyles((theme) => ({
+  root: {
+    minHeight: '100vh',
+    backgroundImage: `url(${background})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  },
+}))
+
