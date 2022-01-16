@@ -17,7 +17,7 @@ export default function ImageCard({place, checked}) {
     return (
     <Collapse 
       in={checked} 
-      {...(checked ? {timeout: 2000} : {})} 
+      {...(checked ? {timeout: 1000} : {})} 
     >
       <Card className={classes.root}>
         <CardActionArea>

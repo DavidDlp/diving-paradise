@@ -8,6 +8,8 @@ import {
 } from '@material-ui/core';
 import Sort from '@material-ui/icons/Sort';
 import { ArrowDropDown } from '@material-ui/icons';
+import { Link as Scroll } from 'react-scroll'
+
 
 export default function Header() {
   const classes = useStyles();
@@ -33,17 +35,18 @@ export default function Header() {
       <Collapse 
         in={checked} 
         {...(checked ? {timeout: 2000} : {})} 
-        collapsedHeight={15}
       >
         <div className={classes.containertitle}>
           <h1 className={classes.title}>
             Welcome <br/> to <br/>
             Diving<span className={classes.text}>Paradise</span>
           </h1>
-          <IconButton>
-            <ArrowDropDown className={classes.goDown}/>
-          </IconButton>
-          </div>
+          <Scroll to="dive-place" smooth={true}>
+            <IconButton>
+              <ArrowDropDown className={classes.goDown}/>
+            </IconButton>
+          </Scroll>
+        </div>
       </Collapse>
     </div>
   );
@@ -66,10 +69,11 @@ const useStyles = makeStyles((theme) => ({
   appbartitle:{
     color: '#000',
     flexGrow: '1',
+    fontSize: '1.5rem',
   },
   appbaricon:{
     color: '#000',
-    fontSize: '1.5rem',
+    fontSize: '2rem',
   },
   appbarcolortext:{
     color: '#008F39',
@@ -83,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text:{
     color: '#008F39',
-    fontSize: '2.5rem',
+    fontSize: '2rem',
   },
   goDown:{
     color: '#000',

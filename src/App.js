@@ -6,7 +6,7 @@ import './App.css';
 import Header from './components/core/Header';
 import DivePlace from './components/DivePlace';
 //IMAGE
-import background from './assets/olas-dive.jpeg'
+import background from './assets/image-background.jpeg'
 
 export default function App() {
   const classes = useStyles();
