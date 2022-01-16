@@ -6,60 +6,64 @@ import {
     CardActions, 
     CardContent, 
     CardMedia, 
+    Collapse, 
     makeStyles, 
     Typography 
 } from '@material-ui/core';
-import island from './../assets/lanzarote.jpeg'
 
-export default function ImageCard() {
+export default function ImageCard({place, checked}) {
     const classes = useStyles();
 
     return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={island}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography 
-            className={classes.title}
-            gutterBottom 
-            variant="h5" 
-            component="h2"
-          >
-            Lizard
-          </Typography>
-          <Typography 
-            className={classes.description}
-            variant="body2" 
-            color="textSecondary" 
-            component="p"
-          >
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
+    <Collapse 
+      in={checked} 
+      {...(checked ? {timeout: 2000} : {})} 
+    >
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={place.image}
+            title="The dive place"
+          />
+          <CardContent>
+            <Typography 
+              className={classes.title}
+              gutterBottom 
+              variant="h5" 
+              component="h2"
+            >
+              {place.title}
+            </Typography>
+            <Typography 
+              className={classes.description}
+              variant="body2" 
+              color="textSecondary" 
+              component="p"
+            >
+              {place.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+        </CardActions>
+      </Card>
+    </Collapse>
     )
 
 };
 
 const useStyles = makeStyles((theme) =>({
     root: {
-        maxWidth: 375,
+        maxWidth: 475,
         background: 'rgba(0,0,0,0.5)',
         margin: '10px',
       },
       media: {
-        height: 120,
+        height: 300,
       },
       title:{
         fontFamily: 'Lobster',

@@ -18,7 +18,7 @@ export default function Header() {
   }, [])
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appbarwrapper}>
           <h1 className={classes.appbartitle}>
