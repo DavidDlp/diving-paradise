@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
   },
   appbarcolortext:{
-    color: '#008F39',
+    color: '#C0C0C0',
   },
   containertitle:{
     textAlign: 'center'
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.5rem',
   },
   text:{
-    color: '#008F39',
+    color: '#C0C0C0',
     fontSize: '2rem',
   },
   goDown:{
