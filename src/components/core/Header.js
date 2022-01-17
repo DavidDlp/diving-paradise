@@ -26,9 +26,11 @@ export default function Header() {
           <h1 className={classes.appbartitle}>
             Diving<span className={classes.appbarcolortext}>Paradise</span>
           </h1>
-          <IconButton>
-            <Sort className={classes.appbaricon}/>
-          </IconButton>
+          <Scroll to="header" smooth={true}>
+            <IconButton>
+              <Sort className={classes.appbaricon}/>
+            </IconButton>
+          </Scroll>
         </Toolbar>
       </AppBar>
 
