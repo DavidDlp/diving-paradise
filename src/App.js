@@ -7,6 +7,7 @@ import Header from './components/core/Header';
 import DivePlace from './components/DivePlace';
 //IMAGE
 import background from './assets/image-background.jpeg'
+import Footer from './components/core/Footer';
 
 export default function App() {
   const classes = useStyles();
@@ -15,6 +16,7 @@ export default function App() {
       <CssBaseline/>
       <Header/>
       <DivePlace/>
+      <Footer/>
     </div>
   );
 }
