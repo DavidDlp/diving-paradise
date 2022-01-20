@@ -54,7 +54,7 @@ export default function ImageCard({place, checked}) {
 const useStyles = makeStyles((theme) =>({
     root: {
         maxWidth: 475,
-        background: 'rgba(0,0,0,0.5)',
+        background: '#1B2021',
         margin: '20px',
       },
       media: {
@@ -64,6 +64,7 @@ const useStyles = makeStyles((theme) =>({
         minHeight: 270,
       },
       title:{
+        height: 50, 
         "& a": {
           textDecoration: "none",
           fontWeight: 'bold',
@@ -71,12 +72,12 @@ const useStyles = makeStyles((theme) =>({
           color: '#C0C0C0',
         },
         "& a:hover":{
-          color: "gold",
+          color: "#EE6C4D",
           zoom: 1.1,
         }, 
       },
       description:{
         fontSize: '0.8rem',
-        color: '#ddd'
+        color: '#C0C0C0'
       },
 }));
